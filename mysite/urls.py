@@ -19,6 +19,7 @@ from django.urls import path, include
 urlpatterns = [
     # whenever django encounters an include() function it chops off whatever part of the URL matched up to that point and sends the remaining string to the included URLconf for further processing.
     path('polls/', include('polls.urls')),
+    path('forum/', include('forum.urls')),
     path('admin/', admin.site.urls),
 
     #  path() function is passed 4 arguments:

@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# SECURITY WARNING: keep the secret key used in production secret! Use environment variables
 SECRET_KEY = 'cqia_3l=gs7@b3b&*j-s=3^9_ks5%-0_-hs4u!jw6a9+bntxl0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -52,6 +52,7 @@ Some of these applications make use of at least 1 database table, so tables in t
 """
 
 INSTALLED_APPS = [
+    'forum.apps.ForumConfig',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
