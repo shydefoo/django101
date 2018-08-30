@@ -19,7 +19,7 @@ def detail(request, question_id):
     # try:
     # the get_object_or_404() function takes a Django model as its first argument and an arbitrary number of keyword arguments, which it passes to the get() function of the model's manager. Http404 is raised if the object doesn't exist.
 
-    question = get_object_or_404(Question.objects.get(pk=question_id))
+    question = get_object_or_404(Question, pk=question_id)
     # except Question.DoesNotExist:
     #     raise Http404("Question does not exist")
     return render(request, 'polls/detail.html', {'question': question})

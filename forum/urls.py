@@ -7,10 +7,7 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),
 
     # (?P<pk>) tells Django to capture the value into a keyword argument named pk --> which means we gotta use the keyword argument pk in our view board_topics
-    url(r'^boards/(?P<pk>\d+)/$', views.board_topics, name='board_topcs'),
-
-
-    # url(r'^admin/', admin.site.urls),
+    url(r'^boards/(?P<pk>\d+)/$', views.board_topics, name='board_topics'),
 ]
 
 
